@@ -41,7 +41,7 @@ run-name: "CI ${{ inputs.leg || 'push' }} ${{ inputs.racecar_run }}"
 jobs:
   continuous-releases:
     name: Continuous releases / pkg.pr.new releases
-    if: ${{ github.repository_owner == 'curiosity-tests' }}
+    if: ${{ github.repository_owner == 'mui' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ github.actor }}"
@@ -159,7 +159,7 @@ jobs:
   publish-dry-run:
     name: Publish Dry Run
 
-    if: ${{ github.repository_owner == 'curiosity-tests' }}
+    if: ${{ github.repository_owner == 'mui' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
