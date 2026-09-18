@@ -7,13 +7,13 @@ on:
   push:
     branches-ignore:
       # should sync with ci.yml as a workaround to bypass github checks
-      - master
-      - next
-      - v*.x
+    - master
+    - next
+    - v*.x
   pull_request:
     paths:
       # should sync with ci.yml as a workaround to bypass github checks
-      - 'docs/**'
+    - 'docs/**'
 
 permissions: {}
 
@@ -23,6 +23,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os:
+        - ubuntu-latest
     steps:
-      - run: 'echo "No build required"'
+    - run: 'echo "No build required"'
